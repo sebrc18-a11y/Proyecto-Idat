@@ -1,0 +1,221 @@
+:root {
+    --color_principal: rgba(0, 51, 108, 1);
+    --fondo-principal: white;
+    --fondo-secundario: #EFEFEF;
+}
+
+@font-face {
+    font-family: 'Beyond Infinity';
+    src: url('../Fuente/BeyondInfinity.woff2') format('woff2'),
+        url('../Fuente/BeyondInfinity.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Banda';
+    src: url('BandaRegular.woff2') format('woff2'),
+        url('BandaRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Cartas San Isidro*/
+
+.main-cartasSanIsidro {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--fondo-secundario);
+}
+
+.cuadro-cartas-SanIsidro {
+    width: 550px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    gap: 40px;
+    position: relative;
+}
+
+.flor-carta-SanIsidro {
+    width: 40px;
+    height: 40px;
+}
+
+.cartaSanIsidro {
+    padding: 0 25px;
+    height: 45px;
+    background-color: var(--color_principal, #003366);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-family: 'Banda', sans-serif;
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+}
+
+.cartaSanIsidro:hover {
+    background-color: #4b4141a7;
+    transition: background-color 0.4s ease;
+}
+
+/* Media Querie */
+
+/* Celular */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .main-cartasSanIsidro {
+    gap: 15px;
+    padding: 20px 0;
+  }
+
+  .cuadro-cartas-SanIsidro {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    margin: 30px auto;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .flor-carta-SanIsidro {
+    width: 30px;
+    height: 30px;
+  }
+
+  .cartaSanIsidro {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+  }
+
+  .cartaSanIsidro a {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .main-cartasSanIsidro {
+    gap: 20px;
+    padding: 30px 0;
+  }
+
+  .cuadro-cartas-SanIsidro {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    margin: 40px auto;
+    gap: 30px;
+    padding: 20px 30px;
+  }
+
+  .flor-carta-SanIsidro {
+    width: 35px;
+    height: 35px;
+  }
+
+  .cartaSanIsidro {
+    width: 100%;
+    height: 43px;
+    padding: 0 20px;
+  }
+
+  .cartaSanIsidro a {
+    font-size: 15px;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .cuadro-cartas-SanIsidro {
+    width: 500px;
+    height: auto;
+    margin: 50px;
+    gap: 35px;
+  }
+
+  .flor-carta-SanIsidro {
+    width: 38px;
+    height: 38px;
+  }
+
+  .cartaSanIsidro {
+    height: 44px;
+    padding: 0 25px;
+  }
+
+  .cartaSanIsidro a {
+    font-size: 16px;
+    letter-spacing: 0.9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 1281px) {
+  .main-cartasSanIsidro {
+    gap: 20px;
+  }
+
+  .cuadro-cartas-SanIsidro {
+    width: 550px;
+    height: 250px;
+    margin: 50px;
+    gap: 40px;
+  }
+
+  .flor-carta-SanIsidro {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cartaSanIsidro {
+    padding: 0 25px;
+    height: 45px;
+  }
+
+  .cartaSanIsidro a {
+    font-size: 17px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+}

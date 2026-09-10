@@ -1,0 +1,405 @@
+:root {
+    --color_principal: rgba(0, 51, 108, 1);
+    --fondo-principal: white;
+    --fondo-secundario: #EFEFEF;
+}
+
+@font-face {
+    font-family: 'Beyond Infinity';
+    src: url('../Fuente/BeyondInfinity.woff2') format('woff2'),
+        url('../Fuente/BeyondInfinity.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Banda';
+    src: url('BandaRegular.woff2') format('woff2'),
+        url('BandaRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Delivery*/
+.main-delivery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--fondo-secundario);
+}
+
+.carta-delivery {
+    width: 180px;
+    height: 45px;
+    background-color: var(--color_principal, #003366);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-family: 'Banda', sans-serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.carta-delivery:hover {
+    background-color: #4b4141a7;
+    transition: background-color 0.4s ease;
+}
+
+.flor-delivery {
+    width: 230px;
+    height: auto;
+}
+
+.paginas-delivery {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.enlaces-delivery {
+    width: 170px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color_principal);
+    gap: 10px;
+
+    p {
+        margin: 0;
+        color: white;
+        font-family: 'Banda', sans-serif;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    a {
+        width: 80px;
+        height: 30px;
+        text-decoration: none;
+        color: white;
+        font-family: 'Banda', sans-serif;
+        font-size: 9px;
+        letter-spacing: 1px;
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a:hover {
+        background-color: black;
+        transition: background-color 0.4s ease;
+    }
+}
+
+.horarios-delivery {
+    width: auto;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    h2 {
+        color: var(--color_principal);
+        font-family: 'Banda', sans-serif;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    p {
+        margin: 0;
+        color: var(--color_principal);
+        font-family: 'Banda', sans-serif;
+        font-size: 17px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+}
+
+.cursiva-delivery {
+    font-style: italic;
+    color: var(--color_principal);
+    font-family: 'Banda', sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.imagen-delivery img {
+    width: 100%;
+    height: 500px;
+}
+
+/* Media Querie */
+/* Celular */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .main-delivery {
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .carta-delivery {
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .flor-delivery {
+    width: 150px;
+    height: auto;
+  }
+
+  .paginas-delivery {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .enlaces-delivery {
+    width: 100%;
+    max-width: 180px;
+    height: 90px;
+    gap: 8px;
+  }
+
+  .enlaces-delivery p {
+    font-size: 13px;
+  }
+
+  .enlaces-delivery a {
+    width: 70px;
+    height: 28px;
+    font-size: 8px;
+  }
+
+  .horarios-delivery {
+    width: 100%;
+    height: auto;
+    padding: 20px 15px;
+    gap: 8px;
+  }
+
+  .horarios-delivery h2 {
+    font-size: 16px;
+  }
+
+  .horarios-delivery p {
+    font-size: 14px;
+  }
+
+  .cursiva-delivery {
+    font-size: 12px;
+  }
+
+  .imagen-delivery img {
+    height: 300px;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .main-delivery {
+    gap: 18px;
+    padding: 30px 20px;
+  }
+
+  .carta-delivery {
+    width: 170px;
+    height: 42px;
+    font-size: 15px;
+    margin-top: 15px;
+  }
+
+  .flor-delivery {
+    width: 180px;
+    height: auto;
+  }
+
+  .paginas-delivery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .enlaces-delivery {
+    width: 160px;
+    height: 95px;
+    gap: 10px;
+  }
+
+  .enlaces-delivery p {
+    font-size: 14px;
+  }
+
+  .enlaces-delivery a {
+    width: 75px;
+    height: 29px;
+    font-size: 8px;
+  }
+
+  .horarios-delivery {
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    gap: 10px;
+  }
+
+  .horarios-delivery h2 {
+    font-size: 18px;
+  }
+
+  .horarios-delivery p {
+    font-size: 15px;
+  }
+
+  .cursiva-delivery {
+    font-size: 13px;
+  }
+
+  .imagen-delivery img {
+    height: 400px;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .main-delivery {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .carta-delivery {
+    width: 175px;
+    height: 44px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .flor-delivery {
+    width: 210px;
+    height: auto;
+  }
+
+  .paginas-delivery {
+    gap: 18px;
+  }
+
+  .enlaces-delivery {
+    width: 165px;
+    height: 98px;
+    gap: 10px;
+  }
+
+  .enlaces-delivery p {
+    font-size: 15px;
+  }
+
+  .enlaces-delivery a {
+    width: 78px;
+    height: 30px;
+    font-size: 8px;
+  }
+
+  .horarios-delivery {
+    height: auto;
+    padding: 25px 20px;
+    gap: 10px;
+  }
+
+  .horarios-delivery h2 {
+    font-size: 19px;
+  }
+
+  .horarios-delivery p {
+    font-size: 16px;
+  }
+
+  .imagen-delivery img {
+    height: 450px;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 1281px) {
+  .main-delivery {
+    gap: 20px;
+  }
+
+  .carta-delivery {
+    width: 180px;
+    height: 45px;
+    font-size: 17px;
+    margin-top: 20px;
+  }
+
+  .flor-delivery {
+    width: 230px;
+    height: auto;
+  }
+
+  .paginas-delivery {
+    gap: 20px;
+  }
+
+  .enlaces-delivery {
+    width: 170px;
+    height: 100px;
+    gap: 10px;
+  }
+
+  .enlaces-delivery p {
+    font-size: 15px;
+  }
+
+  .enlaces-delivery a {
+    width: 80px;
+    height: 30px;
+    font-size: 9px;
+  }
+
+  .horarios-delivery {
+    height: 200px;
+    gap: 10px;
+  }
+
+  .horarios-delivery h2 {
+    font-size: 20px;
+  }
+
+  .horarios-delivery p {
+    font-size: 17px;
+  }
+
+  .cursiva-delivery {
+    font-size: 15px;
+  }
+
+  .imagen-delivery img {
+    height: 500px;
+  }
+}

@@ -1,0 +1,415 @@
+:root {
+  --color_principal: rgba(0, 51, 108, 1);
+  --fondo-principal: white;
+  --fondo-secundario: #EFEFEF;
+}
+
+@font-face {
+  font-family: 'Beyond Infinity';
+  src: url('../Fuente/BeyondInfinity.woff2') format('woff2'),
+    url('../Fuente/BeyondInfinity.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Banda';
+  src: url('BandaRegular.woff2') format('woff2'),
+    url('BandaRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* Index */
+.main-primero {
+  background: var(--fondo-secundario);
+}
+
+.main-segundo {
+  background: var(--fondo-principal);
+}
+
+.slider-img {
+  height: 500px;
+}
+
+#infoElPolo,
+#infoSantaClara,
+#infoSanIsidro {
+  width: 800px;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.imgInformacion img {
+  width: 354px;
+  height: 255px;
+}
+
+.textoInformativo {
+  width: 446px;
+  height: 255px;
+}
+
+.textoInformativo h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--color_principal);
+}
+
+.textoInformativo h3 {
+  font-family: 'Beyond Infinity', cursive;
+  font-size: 40px;
+  color: var(--color_principal);
+}
+
+.textoInformativo p {
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+.dobleLinea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.linea {
+  width: 50px;
+  height: 3px;
+  background-color: var(--color_principal);
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.redes p {
+  margin: 0;
+  text-align: center;
+  color: var(--color_principal);
+  font-family: Banda, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.redes a {
+  text-decoration: none;
+  text-align: center;
+  color: var(--color_principal);
+  font-family: Banda, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Carrusel Infinito Estilos */
+.infinite-carousel-container {
+  width: 100%;
+}
+
+.card-wrapper {
+  flex: 0 0 320px;
+  padding: 0 5px;
+}
+
+.animate-scroll {
+  animation: scroll-x 60s linear infinite;
+}
+
+.infinite-carousel-container:hover .animate-scroll {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.custom-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #000;
+}
+
+.custom-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.4s ease;
+  z-index: 1;
+}
+
+.custom-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  color: white;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-content-inner {
+  max-height: 100%;
+  overflow-y: auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.custom-content-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-card:hover .custom-overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.custom-card:hover .custom-content {
+  opacity: 1;
+}
+
+video.object-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Media Querie */
+
+/* Celular */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .slider-img {
+    height: 180px;
+  }
+
+  #infoElPolo,
+  #infoSantaClara,
+  #infoSanIsidro {
+    width: 95%;
+    padding: 0 10px;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    margin: 0 auto 40px auto;
+    gap: 20px;
+  }
+
+  .imgInformacion {
+    order: -1;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .textoInformativo {
+    width: 100%;
+    height: auto;
+  }
+
+  .textoInformativo h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .textoInformativo h3 {
+    font-size: 28px;
+  }
+
+  .textoInformativo p {
+    font-size: 13px;
+  }
+
+  .dobleLinea {
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .linea {
+    width: 30px;
+  }
+
+  .redes {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .redes p,
+  .redes a {
+    font-size: 16px;
+  }
+
+  .card-wrapper {
+    flex: 0 0 280px;
+  }
+
+  body {
+    font-size: 15px;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .slider-img {
+    height: 350px;
+  }
+
+  #infoElPolo,
+  #infoSantaClara,
+  #infoSanIsidro {
+    width: 90%;
+    max-width: 600px;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    margin: 0 auto 40px auto;
+    gap: 20px;
+  }
+
+  .imgInformacion img {
+    width: 100%;
+    max-width: 354px;
+    height: auto;
+  }
+
+  .textoInformativo {
+    width: 100%;
+    height: auto;
+  }
+
+  .imgInformacion {
+    order: -1;
+  }
+
+  .dobleLinea {
+    gap: 25px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .card-wrapper {
+    flex: 0 0 300px;
+  }
+
+  body {
+    font-size: 17px;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+
+  #infoElPolo,
+  #infoSantaClara,
+  #infoSanIsidro {
+    width: 90%;
+  }
+
+  .card-wrapper {
+    flex: 0 0 300px;
+  }
+
+  body {
+    font-size: 17px;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 1281px) {
+  .slider-img {
+    height: 500px;
+  }
+
+  #infoElPolo,
+  #infoSantaClara,
+  #infoSanIsidro {
+    width: 800px;
+    height: 300px;
+    flex-direction: row;
+    text-align: left;
+    margin: 0 auto;
+    gap: 10px;
+  }
+
+  .imgInformacion img {
+    width: 354px;
+    height: 255px;
+  }
+
+  .textoInformativo {
+    width: 446px;
+    height: 255px;
+  }
+
+  .textoInformativo h2 {
+    font-size: 20px;
+  }
+
+  .textoInformativo h3 {
+    font-size: 40px;
+  }
+
+  .textoInformativo p {
+    font-size: 15px;
+  }
+
+  .dobleLinea {
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .linea {
+    width: 50px;
+  }
+
+  .card-wrapper {
+    flex: 0 0 320px;
+  }
+}

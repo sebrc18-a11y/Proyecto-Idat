@@ -1,0 +1,294 @@
+:root {
+  --color_principal: rgba(0, 51, 108, 1);
+  --fondo-principal: white;
+  --fondo-secundario: #EFEFEF;
+}
+
+@font-face {
+  font-family: 'Beyond Infinity';
+  src: url('../Fuente/BeyondInfinity.woff2') format('woff2'),
+    url('../Fuente/BeyondInfinity.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Banda';
+  src: url('BandaRegular.woff2') format('woff2'),
+    url('BandaRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Menu */
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-image: url('../Imagenes/fondo-nav.png');
+}
+
+.encabezado {
+  width: 100%;
+  height: 200px;
+  background-color: var(--color_principal);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 100px
+}
+
+.botonDelivery {
+  width: 200px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    color: var(--color_principal);
+    font-family: 'Banda', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+.logoPrincipal img {
+  width: 119px;
+  height: 110px;
+}
+
+.botonReserva {
+  width: 400px;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#reserva1,
+#reserva2,
+#reserva3 {
+  width: 100px;
+  height: 80px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  padding: 5px;
+
+  a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Banda', sans-serif;
+  }
+}
+
+.nav-item .nav-link {
+  color: var(--color_principal);
+  font-family: 'Banda', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(148, 112, 58, 1);
+  }
+}
+
+.dropdown-menu {
+  background-image: url(../Imagenes/fondo-nav.png);
+}
+
+.dropdown-menu .dropdown-item {
+  color: var(--color_principal);
+  font-family: 'Banda', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(148, 112, 58, 1);
+  }
+}
+
+/* Media Querie */
+
+/* Celular */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .encabezado {
+    height: auto;
+    padding: 15px 10px;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .logoPrincipal img {
+    width: 65px;
+    height: auto;
+  }
+
+  .botonDelivery {
+    width: 100%;
+    max-width: 200px;
+    height: 35px;
+  }
+
+  .botonDelivery a {
+    font-size: 13px;
+  }
+
+  .botonReserva {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    height: auto;
+  }
+
+  #reserva1,
+  #reserva2,
+  #reserva3 {
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    border-radius: 8px;
+  }
+
+  #reserva1 a,
+  #reserva2 a,
+  #reserva3 a {
+    font-size: 12px;
+  }
+
+  .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100% !important;
+  }
+
+  .nav-item .nav-link {
+    font-size: 12px;
+  }
+
+  .menu {
+    position: static;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .encabezado {
+    height: auto;
+    padding: 20px 15px;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .logoPrincipal img {
+    width: 100px;
+    height: auto;
+  }
+
+  .botonDelivery {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  .botonReserva {
+    width: 100%;
+    max-width: 400px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    gap: 10px;
+  }
+
+  #reserva1,
+  #reserva2,
+  #reserva3 {
+    width: auto;
+    flex: 1;
+    min-width: 100px;
+    height: 55px;
+  }
+
+  #reserva1 a,
+  #reserva2 a,
+  #reserva3 a {
+    font-size: 12px;
+  }
+
+  .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100% !important;
+  }
+
+  .nav-item .nav-link {
+    font-size: 13px;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .encabezado {
+    height: 200px;
+    padding: 0 40px;
+    justify-content: space-between;
+  }
+
+  .botonReserva {
+    width: 300px;
+    height: 120px;
+    gap: 8px;
+  }
+
+  #reserva1,
+  #reserva2,
+  #reserva3 {
+    width: 90px;
+    height: 70px;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 1281px) {
+  .encabezado {
+    height: 200px;
+    padding: 0 100px;
+  }
+
+  .botonReserva {
+    width: 400px;
+    height: 120px;
+  }
+
+  #reserva1,
+  #reserva2,
+  #reserva3 {
+    width: 100px;
+    height: 80px;
+  }
+}

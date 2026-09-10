@@ -1,0 +1,466 @@
+:root {
+    --color_principal: rgba(0, 51, 108, 1);
+    --fondo-principal: white;
+    --fondo-secundario: #EFEFEF;
+}
+
+@font-face {
+    font-family: 'Beyond Infinity';
+    src: url('../Fuente/BeyondInfinity.woff2') format('woff2'),
+        url('../Fuente/BeyondInfinity.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Banda';
+    src: url('BandaRegular.woff2') format('woff2'),
+        url('BandaRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+.main-contacto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--fondo-secundario);
+    padding-top: 50px;
+    padding-bottom: 80px;
+    font-family: 'Banda', sans-serif;
+}
+
+.contacto-redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    width: 90%;
+
+    img {
+        width: 70%;
+        margin-bottom: 30px;
+    }
+
+    ul {
+        color: var(--color_principal);
+        font-size: 18px;
+        line-height: 2;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+
+    a {
+        color: var(--color_principal);
+        text-decoration: none;
+    }
+}
+
+.formulario-contacto {
+    background-color: #D6E6F2;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 40px 40px 40px;
+    position: relative;
+
+    p {
+        color: var(--color_principal);
+        font-size: 11px;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 100px;
+        line-height: 1.5;
+        width: 90%;
+    }
+
+    a {
+        color: var(--color_principal);
+    }
+}
+
+.formulario-contacto > img {
+    width: 45%;
+    height: auto;
+    position: absolute;
+    top: -25px;
+}
+
+.formulario {
+    width: 100%;
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
+    }
+}
+
+
+.formulario input,
+.formulario textarea {
+    background-color: var(--fondo-principal);
+    border: 1px solid var(--color_principal);
+    padding: 12px 15px;
+    font-family: 'Banda', sans-serif;
+    color: black;
+    font-size: 14px;
+}
+
+.formulario input[name="CajaNombre"] {
+    width: 100%;
+}
+
+.formulario input[name="CajaCorreo"],
+.formulario input[name="CajaTelefono"] {
+    width: calc(50% - 7.5px);
+}
+
+.formulario textarea[name="CajaTexto"] {
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+
+.formulario button {
+    width: 100%;             
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.formulario button img {
+    position: static;      
+    width: 180px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+    .formulario-contacto {
+        width: 90%;
+        padding: 40px 20px 30px 20px;
+    }
+
+    .formulario input[name="CajaCorreo"],
+    .formulario input[name="CajaTelefono"] {
+        width: 100%;
+    }
+
+    .contacto-redes ul {
+        font-size: 16px;
+        padding-left: 20px;
+    }
+
+    .contacto-redes img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .formulario-contacto p {
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .formulario button img {
+        width: 150px;
+    }
+}
+
+/*Media Querie*/
+
+/* Celular */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .main-contacto {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  .contacto-redes {
+    margin-bottom: 40px;
+    width: 95%;
+  }
+
+  .contacto-redes img {
+    width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .contacto-redes ul {
+    color: var(--color_principal);
+    font-size: 12px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .contacto-redes li {
+    margin-bottom: 8px;
+  }
+
+  .formulario-contacto {
+    width: 95%;
+    padding: 35px 15px 25px 15px;
+    margin-top: 50px;
+  }
+
+  .formulario-contacto > img {
+    width: 95%;
+    top: -35px;
+  }
+
+  .formulario-contacto p {
+    font-size: 9px;
+    margin-bottom: 25px;
+    margin-top: 80px;
+    width: 100%;
+    line-height: 1.4;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .formulario input[name="CajaNombre"],
+  .formulario input[name="CajaCorreo"],
+  .formulario input[name="CajaTelefono"],
+  .formulario textarea[name="CajaTexto"] {
+    width: 100%;
+  }
+
+  .formulario textarea[name="CajaTexto"] {
+    height: 120px;
+  }
+
+  .formulario button img {
+    width: 120px;
+  }
+}
+
+/* Tabletas */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .main-contacto {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+
+  .contacto-redes {
+    margin-bottom: 45px;
+    width: 92%;
+  }
+
+  .contacto-redes img {
+    width: 80%;
+    margin-bottom: 25px;
+  }
+
+  .contacto-redes ul {
+    font-size: 14px;
+    line-height: 1.9;
+    letter-spacing: 1px;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .contacto-redes li {
+    margin-bottom: 10px;
+  }
+
+  .formulario-contacto {
+    width: 85%;
+    max-width: 700px;
+    padding: 45px 30px 35px 30px;
+    margin-top: 50px;
+  }
+
+  .formulario-contacto > img {
+    width: 50%;
+    top: -30px;
+  }
+
+  .formulario-contacto p {
+    font-size: 10px;
+    margin-bottom: 28px;
+    margin-top: 90px;
+    width: 95%;
+    line-height: 1.5;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    padding: 11px 13px;
+    font-size: 13px;
+  }
+
+  .formulario input[name="CajaNombre"] {
+    width: 100%;
+  }
+
+  .formulario input[name="CajaCorreo"],
+  .formulario input[name="CajaTelefono"] {
+    width: calc(50% - 7.5px);
+  }
+
+  .formulario textarea[name="CajaTexto"] {
+    width: 100%;
+    height: 135px;
+  }
+
+  .formulario button img {
+    width: 150px;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .main-contacto {
+    padding-top: 45px;
+    padding-bottom: 75px;
+  }
+
+  .contacto-redes {
+    margin-bottom: 48px;
+    width: 90%;
+  }
+
+  .contacto-redes img {
+    width: 75%;
+    margin-bottom: 28px;
+  }
+
+  .contacto-redes ul {
+    font-size: 17px;
+    line-height: 1.95;
+    letter-spacing: 1.8px;
+  }
+
+  .formulario-contacto {
+    width: 82%;
+    max-width: 750px;
+    padding: 48px 38px 38px 38px;
+  }
+
+  .formulario-contacto > img {
+    width: 47%;
+    top: -27px;
+  }
+
+  .formulario-contacto p {
+    font-size: 10px;
+    margin-bottom: 29px;
+    margin-top: 95px;
+    width: 92%;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .formulario input[name="CajaCorreo"],
+  .formulario input[name="CajaTelefono"] {
+    width: calc(50% - 7.5px);
+  }
+
+  .formulario textarea[name="CajaTexto"] {
+    height: 145px;
+  }
+
+  .formulario button img {
+    width: 170px;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 1281px) {
+  .main-contacto {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+
+  .contacto-redes {
+    margin-bottom: 50px;
+    width: 90%;
+  }
+
+  .contacto-redes img {
+    width: 70%;
+    margin-bottom: 30px;
+  }
+
+  .contacto-redes ul {
+    color: var(--color_principal);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 2px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .formulario-contacto {
+    background-color: #D6E6F2;
+    width: 80%;
+    max-width: 800px;
+    padding: 50px 40px 40px 40px;
+  }
+
+  .formulario-contacto > img {
+    width: 45%;
+    top: -25px;
+  }
+
+  .formulario-contacto p {
+    font-size: 11px;
+    margin-bottom: 30px;
+    margin-top: 100px;
+    width: 90%;
+  }
+
+  .formulario input,
+  .formulario textarea {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .formulario input[name="CajaNombre"] {
+    width: 100%;
+  }
+
+  .formulario input[name="CajaCorreo"],
+  .formulario input[name="CajaTelefono"] {
+    width: calc(50% - 7.5px);
+  }
+
+  .formulario textarea[name="CajaTexto"] {
+    width: 100%;
+    height: 150px;
+  }
+
+  .formulario button {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .formulario button img {
+    width: 180px;
+  }
+}

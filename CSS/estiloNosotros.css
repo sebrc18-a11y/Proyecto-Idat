@@ -1,0 +1,409 @@
+:root {
+  --color_principal: rgba(0, 51, 108, 1);
+  --fondo-principal: white;
+  --fondo-secundario: #EFEFEF;
+}
+
+@font-face {
+  font-family: 'Beyond Infinity';
+  src: url('../Fuente/BeyondInfinity.woff2') format('woff2'),
+    url('../Fuente/BeyondInfinity.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Banda';
+  src: url('BandaRegular.woff2') format('woff2'),
+    url('BandaRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.info-nosotros {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  color: var(--color_principal);
+  padding-bottom: 30px;
+
+  .flor-pequeña {
+    width: 70px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 50px;
+  }
+
+  h2 {
+    font-size: 13px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-family: 'Beyond Infinity', cursive;
+    font-size: 60px;
+    color: var(--color_principal);
+    margin: 10px 0;
+  }
+
+  p {
+    max-width: 400px;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+.img-nost1 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 40px;
+  background: linear-gradient(to bottom, white 50%, var(--color_principal) 50%);
+
+  img {
+    width: 50%;
+    height: auto;
+  }
+}
+
+
+
+
+#info-espacio {
+  width: 100%;
+  height: 400px;
+  background-color: var(--color_principal);
+  color: var(--fondo-principal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+
+  h2 {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    font-family: 'Beyond Infinity', cursive;
+    font-size: 40px;
+    font-weight: normal;
+    margin: 5px 0 15px 0;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    opacity: 0.95;
+  }
+}
+
+#info-familia {
+  width: 100%;
+  height: 400px;
+  background-color: #D6E6F2;
+  color: var(--color_principal);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+
+  h2 {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    font-family: 'Beyond Infinity', cursive;
+    font-size: 40px;
+    font-weight: normal;
+    margin: 5px 0 15px 0;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+}
+
+.text-nosotros {
+  width: 300px;
+  text-align: left;
+
+  img {
+    width: 320px;
+    height: auto;
+  }
+}
+
+.img-nosotros {
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 375px;
+    height: 355px;
+  }
+}
+
+/* Media Querie */
+
+/* Celular */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .info-nosotros {
+    padding-bottom: 20px;
+  }
+
+  .info-nosotros .flor-pequeña {
+    width: 50px;
+    margin-top: 30px;
+    margin-bottom: 8px;
+  }
+
+  .info-nosotros h2 {
+    font-size: 11px;
+  }
+
+  .info-nosotros h3 {
+    font-size: 36px;
+    margin: 8px 0;
+  }
+
+  .info-nosotros p {
+    max-width: 90%;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .img-nost1 {
+    padding-bottom: 30px;
+  }
+
+  .img-nost1 img {
+    width: 90%;
+  }
+
+  #info-espacio,
+  #info-familia {
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+
+  #info-espacio {
+    background-color: var(--color_principal);
+  }
+
+  #info-familia {
+    background-color: #D6E6F2;
+    padding: 30px 20px;
+  }
+
+  #info-espacio h2,
+  #info-familia h2 {
+    font-size: 11px;
+  }
+
+  #info-espacio h3,
+  #info-familia h3 {
+    font-size: 28px;
+  }
+
+  #info-espacio p,
+  #info-familia p {
+    font-size: 13px;
+  }
+
+  .text-nosotros {
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-nosotros img {
+    width: 280px;
+    height: auto;
+    margin-top: 15px;
+  }
+
+  .img-nosotros {
+    max-width: 100%;
+    width: 100%;
+    order: -1;
+  }
+
+  .img-nosotros img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .info-nosotros {
+    padding-bottom: 25px;
+  }
+
+  .info-nosotros .flor-pequeña {
+    width: 60px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  .info-nosotros h2 {
+    font-size: 12px;
+  }
+
+  .info-nosotros h3 {
+    font-size: 48px;
+    margin: 10px 0;
+  }
+
+  .info-nosotros p {
+    max-width: 500px;
+    font-size: 14px;
+  }
+
+  .img-nost1 img {
+    width: 70%;
+  }
+
+  #info-espacio,
+  #info-familia {
+    height: auto;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 30px;
+  }
+
+  #info-espacio h3,
+  #info-familia h3 {
+    font-size: 32px;
+  }
+
+  .text-nosotros {
+    width: 100%;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .text-nosotros img {
+    width: 100%;
+    max-width: 320px;
+    margin-top: 15px;
+
+  }
+
+  .img-nosotros {
+    max-width: 100%;
+    width: 100%;
+    order: -1;
+  }
+
+  .img-nosotros img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .info-nosotros h3 {
+    font-size: 50px;
+  }
+
+  #info-espacio,
+  #info-familia {
+    height: 350px;
+    gap: 40px;
+  }
+
+  #info-espacio h3,
+  #info-familia h3 {
+    font-size: 36px;
+  }
+
+  .text-nosotros {
+    width: 280px;
+  }
+
+  .img-nosotros img {
+    width: 320px;
+    height: 300px;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 1281px) {
+  .info-nosotros {
+    padding-bottom: 30px;
+  }
+
+  .info-nosotros .flor-pequeña {
+    width: 70px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  .info-nosotros h3 {
+    font-size: 60px;
+  }
+
+  .img-nost1 img {
+    width: 50%;
+  }
+
+  #info-espacio,
+  #info-familia {
+    height: 400px;
+    gap: 60px;
+    padding: 80px 20px;
+  }
+
+  #info-espacio h3,
+  #info-familia h3 {
+    font-size: 40px;
+  }
+
+  .text-nosotros {
+    width: 300px;
+    text-align: left;
+  }
+
+  .text-nosotros img {
+    width: 320px;
+  }
+
+  .img-nosotros img {
+    width: 375px;
+    height: 355px;
+  }
+}
