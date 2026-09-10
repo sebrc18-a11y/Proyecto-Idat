@@ -15,8 +15,8 @@
 
 @font-face {
     font-family: 'Banda';
-    src: url('BandaRegular.woff2') format('woff2'),
-        url('BandaRegular.woff') format('woff');
+    src: url('../Fuente/BandaRegular.woff2') format('woff2'),
+        url('../Fuente/BandaRegular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

@@ -1,0 +1,185 @@
+:root {
+  --color_principal: rgba(0, 51, 108, 1);
+  --fondo-principal: white;
+  --fondo-secundario: #efefef;
+}
+
+@font-face {
+  font-family: "Delightis";
+  src:
+    url("../Fuente/Delightis.woff2") format("woff2"),
+    url("../Fuente/Delightis.woff") format("woff"); 
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: "Banda";
+  src:
+    url("../Fuente/BandaRegular.woff2") format("woff2"),
+    url("../Fuente/BandaRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Banda", sans-serif;
+  background-color: var(--fondo-secundario);
+  color: #333;
+}
+
+.contenedor-principal {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  align-items: start;
+}
+
+.menu-seccion {
+  background-color: var(--fondo-principal);
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+h1 {
+  font-family: "Delightis";
+  font-size: 2.9rem !important;
+  color: var(--color_principal);
+  border-bottom: 3px solid var(--color_principal);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-family: "Delightis";
+  font-size: 2rem !important;
+  color: #e3000f;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--fondo-secundario);
+  padding-bottom: 5px;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background-color: var(--fondo-principal);
+  border: 1px solid var(--fondo-secundario);
+  padding: 15px;
+  border-radius: 6px;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.card h5 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.4;
+  font-family: "Banda", sans-serif;
+}
+
+.card span {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+  color: var(--color_principal);
+  font-size: 1.2rem;
+}
+
+.card button {
+  font-family: "Banda", sans-serif;
+  background-color: var(--color_principal);
+  color: var(--fondo-principal);
+  border: none;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.card button:hover {
+  opacity: 0.8;
+}
+
+#carrito-aside {
+  position: sticky;
+  top: 30px;
+}
+
+#carrito-contenedor {
+  background-color: var(--fondo-principal);
+  padding: 25px;
+  border-radius: 8px;
+  border: 2px solid var(--color_principal);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#carrito-contenedor h2 {
+  color: var(--color_principal);
+  margin-top: 0;
+  border-bottom: 2px solid var(--color_principal);
+}
+
+#lista {
+  list-style-type: none;
+  margin: 20px 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+#lista li {
+  padding: 12px 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 1.1rem;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+#lista li:last-child {
+  border-bottom: none;
+}
+
+#carrito-contenedor h3 {
+  text-align: right;
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0;
+  margin-top: 20px;
+  border-top: 2px solid var(--fondo-secundario);
+  padding-top: 15px;
+}
+
+#total {
+  color: var(--color_principal);
+  font-weight: bold;
+}
