@@ -1,10 +1,11 @@
 let carrito = [];
+
 let total = 0;
 
 function agregar(nombre, precio) {
-  let productoExistente = carrito.find(
-    (producto) => producto.nombre === nombre,
-  );
+  let productoExistente = carrito.find(function (producto) {
+    return producto.nombre === nombre;
+  });
 
   if (productoExistente) {
     productoExistente.cantidad++;
@@ -19,6 +20,7 @@ function agregar(nombre, precio) {
 
 function mostrarCarrito() {
   let lista = document.getElementById("lista");
+
   lista.innerHTML = "";
 
   carrito.forEach((producto) => {

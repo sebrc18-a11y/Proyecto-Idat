@@ -4,7 +4,7 @@ $estiloPagina = 'CSS/estiloDelivery.css';
 include 'encabezado.php';
 ?>
 <main class="main-delivery">
-    <a href="cartaDelivery.php" class="carta-delivery">CARTA DELIVERY</a>
+    <a href="carrito.php" class="carta-delivery">CARTA DELIVERY</a>
     <img src="Imagenes/flor-delivery.png" class="flor-delivery">
 
     <section class="paginas-delivery">
